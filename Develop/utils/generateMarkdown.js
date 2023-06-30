@@ -62,9 +62,11 @@ ${answers.Contributions}
 ${answers.Tests}
 
 ## Questions
-If you have any questions, you can reach out to me via GitHub:
+If you have any questions, you can reach out to me via GitHub or E-mail:
 
 - GitHub: [${answers.Questions}](https://github.com/${answers.Questions})
+- Email: [${answers.eMail}](mailto:${answers.eMail})
+
 `;
 }
 
