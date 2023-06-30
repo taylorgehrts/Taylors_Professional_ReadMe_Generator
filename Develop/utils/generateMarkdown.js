@@ -1,6 +1,22 @@
 // Function to render the license badge based on the license value
 function renderLicenseBadge(license) {
-  return license ? `[![License](https://img.shields.io/badge/License-${license}-blue.svg)](https://opensource.org/licenses/${license})` : '';
+  if (license === "MIT") {
+    return "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)";
+  }
+  if (license === "Apache-2.0") {
+    return "[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)";
+  }
+  if (license === "GPL v3") {
+    return "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)";
+  }
+  if (license === "BSD") {
+    return "[![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)";
+  }
+  if (license === "ISC") {
+    return "[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)";
+  }
+
+  return ""; // Return an empty string if no matching license is found
 }
 
 // Function to render the license link based on the license value
@@ -17,7 +33,7 @@ function renderLicenseSection(license) {
 function generateMarkdown(answers) {
   const licenseBadge = renderLicenseBadge(answers.License);
 
-  return `# ${answers.Title}
+  return `# ${answers.Title} ${licenseBadge}
 
 ## Table of Contents
 - [Description](#description)
@@ -37,12 +53,10 @@ ${answers.Installation}
 ## Usage
 ${answers.Usage}
 
-## License
-${licenseBadge}
 ${renderLicenseSection(answers.License)}
 
 ## Contributing
-${answers.Contributing}
+${answers.Contributions}
 
 ## Tests
 ${answers.Tests}
