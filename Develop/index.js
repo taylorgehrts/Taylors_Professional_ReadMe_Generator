@@ -1,5 +1,6 @@
 //import of dependencies
 const inquirer = require("inquirer");
+const generateREADME = require("./utils/generateMarkdown")
 const fs = require('fs');
 
 // TODO: Create an array of questions for user input
@@ -43,7 +44,7 @@ const questions = [
         type: "list",
         name: "License",
         message: "What license would you like to use?",
-        choices: ["MIT License (MIT)", "Apache License 2.0 (Apache-2.0)", "GNU General Public License (GPL)", "Berkeley Software Distribution License (BSD)", "Internet Systems Consortium License (ISC)"]
+        choices: ["MIT", "Apache-2.0", "GPL v3", "BSD", "ISC"]
     },
 
     {
@@ -69,16 +70,26 @@ const questions = [
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) { }
+function writeToFile(fileName, data) {
+    fs.writeFile(fileName, data, (error) => {
+        error ? console.error(error) : console.log("Your ReadME has been generated!")
+    })
+}
 
 // TODO: Create a function to initialize app
 function init() {
     inquirer
         .prompt(questions)
+        .then((answers) => {
+            const readmeContent = generateREADME(answers);
+            writeToFile("README.md", readmeContent);
 
-
-
+        })
 }
+
+
+
+
 
 // Function call to initialize app
 init();
