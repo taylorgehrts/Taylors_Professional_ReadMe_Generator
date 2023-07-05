@@ -19,7 +19,8 @@
 Right now you would need to clone the repository and then navigate to the directory and open the terminal. from there you will need to run npm install to install any dependencies and then run the program
 
 ## Usage
-Simply run the program with the command node index.js in the terminal and then answer the questions, when you are through it will generate the README file.
+- Simply run the program with the command node index.js in the terminal and then answer the questions, when you are through it will generate the README file.
+- [Walkthrough Video](https://drive.google.com/file/d/12BleJ_CEeDh6C69ZzQhjTM6krKM3oK9L/view)
 
 ## License
 This project is licensed under the MIT license. Click [License](https://opensource.org/licenses/MIT) for more information.

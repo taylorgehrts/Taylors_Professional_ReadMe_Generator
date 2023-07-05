@@ -1,4 +1,4 @@
-# Taylor's Professional README Generator [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+# taylors project [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Table of Contents
 - [Description](#description)
@@ -10,22 +10,22 @@
 - [Questions](#questions)
 
 ## Description
-This is a simple program based on node and inquirer that will create a list of prompts in the terminal that a user can answer to generate a read me file
+simple readme generator
 
 ## Installation
-Right now yopu would need to clone the repository and then navigate to the directory and open the terminal. from there you will need to run npm install to install any dependencies and then run the program
+clone repo and run npm install
 
 ## Usage
-Simply run the program with node index.js in the terminal and then answer the questions, when you are through it will generate the README file.
+answer the prompts
 
 ## License
 This project is licensed under the MIT license. Click [License](https://opensource.org/licenses/MIT) for more information.
 
 ## Contributing
-Taylor Gehrts
+taylor
 
 ## Tests
-There are currently no tests for this project
+none
 
 ## Questions
 If you have any questions, you can reach out to me via GitHub or E-mail:
